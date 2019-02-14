@@ -4,11 +4,13 @@ import java.util.List;
 
 import br.com.caelum.livraria.modelo.Livro;
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 
 @Stateless
 public class LivroDao {
 
-    private Banco banco = new Banco();
+    @Inject
+	private Banco banco;
 
     public void salva(Livro livro) {
         banco.save(livro);
