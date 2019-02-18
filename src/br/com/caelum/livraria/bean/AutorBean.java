@@ -6,6 +6,7 @@ import javax.enterprise.inject.Model;
 
 import br.com.caelum.livraria.modelo.Autor;
 import br.com.caelum.livraria.service.AutorService;
+import br.com.caelum.livraria.service.LivrariaException;
 
 import javax.inject.Inject;
 
@@ -21,8 +22,9 @@ public class AutorBean {
         return autor;
     }
 
-    public void cadastra() {
-    	autorService.adiciona(autor);
+    public void cadastra(){
+    	
+    	autorService.adiciona(autor);    	
         this.autor = new Autor();
     }
 
