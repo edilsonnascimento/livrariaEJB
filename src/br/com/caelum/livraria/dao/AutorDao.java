@@ -2,19 +2,18 @@ package br.com.caelum.livraria.dao;
 
 import java.util.List;
 
+import br.com.caelum.livraria.interceptador.LogInterceptador;
 import br.com.caelum.livraria.modelo.Autor;
 import javax.ejb.Stateless;
-import javax.ejb.TransactionAttribute;
-import javax.ejb.TransactionAttributeType;
 import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
-import javax.inject.Inject;
-import javax.management.RuntimeErrorException;
+//import javax.interceptor.Interceptors;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 @Stateless
 @TransactionManagement(TransactionManagementType.CONTAINER) // Opicional
+//@Interceptors({LogInterceptador.class})
 public class AutorDao {
 
 

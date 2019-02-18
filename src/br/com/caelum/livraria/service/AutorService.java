@@ -22,7 +22,7 @@ public class AutorService {
 		autorDao.salva(autor);
 		
         //Erro n Aplicação: Erro de regra de negócio.
-		throw new LivrariaException();
+//		throw new LivrariaException();
 	}	
 
 	public List<Autor> todosAutores(){
