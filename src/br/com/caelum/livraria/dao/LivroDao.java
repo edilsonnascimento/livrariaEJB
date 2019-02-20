@@ -22,4 +22,11 @@ public class LivroDao {
         		.getResultList();
     }
 
+	public List<Livro> todosLivrosPeloNome(String nome) {
+		
+		return manager.createQuery("SELECT l FROM Livro l WHERE l.titulo like :pTitulo", Livro.class)
+				.setParameter("pTitulo", "%" + nome + "%")
+				.getResultList();
+	}
+
 }

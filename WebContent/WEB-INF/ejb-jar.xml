@@ -9,7 +9,8 @@ version="3.1">
 				br.com.caelum.livraria.interceptador.LogInterceptador				
 			</interceptor-class>
 	 	</interceptor>
-	 	
+
+<!-- 	 	
 	 	<interceptor>
 	 		<interceptor-class>
 				br.com.caelum.livraria.interceptador.LogInterceptorTeste				
@@ -21,11 +22,12 @@ version="3.1">
 				br.com.caelum.livraria.interceptador.AuditoriaInterceptadorTeste				
 			</interceptor-class>
 	 	</interceptor>	 	
-	 	
+-->
 	 </interceptors>
 	 
 	 <assembly-descriptor>
 	 
+<!--  
 		<interceptor-binding>
 			<ejb-name>AutorDao</ejb-name>
 			<interceptor-class>
@@ -39,7 +41,7 @@ version="3.1">
 				br.com.caelum.livraria.interceptador.AuditoriaInterceptadorTeste
 			</interceptor-class>
 		</interceptor-binding>
-		 		
+-->
 		<interceptor-binding>
 			<ejb-name>AutorService</ejb-name>
 			<interceptor-class>
