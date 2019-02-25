@@ -1,0 +1,45 @@
+08 - Agendamento e EAR
+
+01 - Agendamento e EAR
+
+
+Programar execução de métodos criando um temporizador.
+
+* Agendamento de chamadas
+
+- Criado classe Agendador();
+- @Singleton não tendo necessidade de crar um pool de conexão e @Startup iniciando junto com o Servilet Conteiner.
+- Criar o método para mostrar uma mesagem a cada 10 segundos
+
+@Singleton
+@Startup
+public class Agendador {
+
+	
+	@Schedule(hour="*", minute="*", second="*/5", persistent=false)
+	public void TestaAgendadro() {
+		
+		Date data = new Date(System.currentTimeMillis());  
+		SimpleDateFormat formatarDate = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		
+		
+		System.out.println("[INFO] MOSTRA DATA DE EXECUÇÃO: " + formatarDate.format(data));
+	}
+
+@Schedule(hour="*", minute="*", second="*/10", persistent=false) anotado no método, nesse caso o método é executado a cada 10 segundos, dica criar a classe como @Singleton e @Startup
+
+
+* Deploy através de EAR (Enterprise ARchive)
+
+Executar mais de um projeto em um mesmo deploy
+
+- Excluir os projetos do servilet conteiner.
+- Criar projeto Enterprise Application Project.
+- Selecionado os dois projetos e finalizado.
+- Executar o serviletconteiner.
+
+
+
+
+
+
